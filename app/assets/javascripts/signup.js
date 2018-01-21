@@ -23,8 +23,8 @@ function SignUpValidator() {
         required: true,
         minlength: 6,
         maxlength: 256,
-        usr_format: true,
-        remote:"users/check_username"
+        usr_format: true
+        
       },
       "user[email]": {
        required: true,
@@ -112,15 +112,10 @@ invalidHandler: function(event, validator) {
      }
    });
 
-  setTimeout(function(){ $("#exampleInputFile").change(function(){
-    if (this.files && this.files[0]) {
-      var reader = new FileReader();
-      reader.onload = function (e) {
-        $('#preview').attr('src', e.target.result);
-      }
-        reader.readAsDataURL(this.files[0]);
-      }
-  }); }, 400);
+ setTimeout(function(){
+  $('#flash').remove();
+},5000);
+ }
 }
 
 

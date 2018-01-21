@@ -10,6 +10,9 @@
 </head>
 <body>
 <%= render :partial=>"layouts/common/header"%>
+<div id="div_flash_message" class="container">
+		<%= render :partial=>"/layouts/common/flash_message" -%>
+	</div>
 	<div id="popup_modal" class="modal fade"></div>
 	<%= yield %>
 </body>

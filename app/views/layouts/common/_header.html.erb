@@ -8,9 +8,9 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a class="navbar-brand" href="<%= issues_path %>">
-      <i class="fa fa-bug"></i>
-        Bug Tracker
+      <a class="navbar-brand" href="<%=  %>">
+      <i class=""></i>
+        DOCTALK
       </a>
     </div>
 
@@ -19,12 +19,8 @@
       <ul class="nav navbar-nav navbar-right">
       <%if current_user.present?%>
         <li>
-          <% if current_user.image.present? %>
-            <%= image_tag  current_user.image,  :alt =>"Image", :class => "img-rounded profile-pic" %>
-          <%else%>
-             <img src="/assets/" alt="Profile picture" class="img-rounded profile-pic">
-          <%end%>
-          <span class="profile-name"><%=current_user.name%></span>
+         
+          <span class="profile-name"><%=current_user.username%></span>
         </li>
          <li>
           <!-- Sign up Button trigger modal -->
