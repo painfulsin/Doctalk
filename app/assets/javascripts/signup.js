@@ -24,7 +24,7 @@ function SignUpValidator() {
         minlength: 6,
         maxlength: 256,
         usr_format: true
-        
+
       },
       "user[email]": {
        required: true,
@@ -116,6 +116,6 @@ invalidHandler: function(event, validator) {
   $('#flash').remove();
 },5000);
  }
-}
+
 
 

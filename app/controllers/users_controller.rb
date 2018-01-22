@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
 
-  def index 
-  end 
+  def index
+  end
 
   def check_email
     @user = User.find_by_email(params[:user][:email])
@@ -42,7 +42,7 @@ def create
   private
 
   def user_params
-    params.require(:user).permit( :username, :email, :password, :password_confirmation)
+    params.require(:user).permit( :name, :email, :password, :password_confirmation)
   end
 
 end
