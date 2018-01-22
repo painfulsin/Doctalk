@@ -3,9 +3,8 @@ function session_validator() {
   $('#sign_in').validate({
     debug: true,
     rules: {
-     "username": {
-       required: true,
-       remote:"/sessions/check_username"
+     "email": {
+       required: true
      },
      "password" : {
       required: true,
@@ -19,9 +18,9 @@ function session_validator() {
 
   messages: {
 
-    "username": {
+    "email": {
       required: "This field is required",
-      remote: "Username  doesn't exists"
+      remote: "Email  doesn't exists"
     },
 
     "password": {

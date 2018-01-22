@@ -13,6 +13,8 @@ def create
     redirect_to doctors_path, :notice => "Logged in!"
   else
     redirect_to root_path
+    flash[:error] = "Incorrect Email or password"
+
   end
 end
  def destroy
@@ -21,5 +23,5 @@ end
   redirect_to root_path
   end
 
-  
+
 end

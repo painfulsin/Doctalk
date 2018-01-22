@@ -11,13 +11,6 @@ class UsersController < ApplicationController
   end
 end
 
-  def check_username
-    @user = User.find_by_username(params[:user][:username])
-    respond_to do |format|
-      format.json { render :json => !@user  }
-  end
-end
-
   def new
     @user = User.new
     respond_to do |format|
