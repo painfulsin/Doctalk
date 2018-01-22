@@ -46,7 +46,7 @@ function SignUpValidator() {
   errorClass: "help-block",
   messages: {
    "user[name]": {
-    required: "This field is required",
+    required: "Name is required",
     alpha: "Should contain only alphabets!"
   },
   "user[username]": {
@@ -55,17 +55,17 @@ function SignUpValidator() {
     remote: "Username has already been taken"
   },
   "user[email]": {
-    required: "This field is required",
+    required: "Email is required",
     email: "Please enter a valid E-Mail address!",
     remote: "Email has already been taken"
   },
   "user[password]": {
-    required:"This field is required",
+    required:"Password is required",
     minlength:"Enter minimum 6 characters!",
     maxlength: "Exceeded length!"
   },
   "user[password_confirmation]": {
-    required: "This field is required",
+    required: "Password confirmation is required",
     pswd_match: "Password does not match"
   }
 },

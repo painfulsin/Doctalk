@@ -19,12 +19,12 @@ function session_validator() {
   messages: {
 
     "email": {
-      required: "This field is required",
+      required: "Email is required",
       remote: "Email  doesn't exists"
     },
 
     "password": {
-      required:"This field is required",
+      required:"Password is required",
       minlength:"Enter minimum 6 characters!"
 
     },
