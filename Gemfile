@@ -18,6 +18,7 @@ gem 'pry'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'tzinfo-data'
+gem "rolify"
 gem 'turbolinks'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 
