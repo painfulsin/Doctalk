@@ -17,6 +17,7 @@
 //= require jquery.validate.min
 //= require turbolinks
 //= require signup
+//= require user_update
 //= require signin
 //= require creation
 //= require_tree .

@@ -1,0 +1,48 @@
+    <div class="modal-header">
+
+      <h4 class="modal-title">ACCOUNT UPDATE</h4>
+    </div>
+
+    <div class="modal-body">
+      <%= form_for @user, :url=> user_path(@user), :method => :put, html:{:class =>"form-horizontal", :id=>"registerupdate" } do |f| %>
+
+      <div class="form-group">
+        <label for="Username" class="col-sm-3 control-label">Name*</label>
+        <div class="col-sm-7">
+          <%= f.text_field :name, :class=>"form-control", :placeholder=>"Username"%>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputEmail" class="col-sm-3 control-label">Email id*</label>
+        <div class="col-sm-7">
+          <%= f.text_field :email, :class=>"form-control",:id=>"user_email", :placeholder=>"Email"%>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputPassword" class="col-sm-3 control-label">Password*</label>
+        <div class="col-sm-7">
+          <%= f.password_field :password, :class=>"form-control", :placeholder=>"Password"%>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputPassword" class="col-sm-3 control-label">Confirm*</label>
+        <div class="col-sm-7">
+          <%= f.password_field :password_confirmation, :class=>"form-control", :placeholder=>"confirmation password"%>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+       <%= f.submit "Update", :class=>"btn btn-primary ok-btn-padding" %>
+       <%= link_to "Cancel",  doctors_path ,:class=>"btn btn-default ok-btn-padding" %>
+       <%end%>
+      </div>
+    </div>
+    <script type="text/javascript">
+      SignUpEditValidator()
+    </script>
