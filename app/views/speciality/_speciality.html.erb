@@ -1,0 +1,62 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title">Doctor Information</h4>
+    </div>
+
+    <div class="modal-body">
+      <%= form_for :speciality, :url => speciality_index_path , method: :post, authenticity_token: true, html:{:class =>"form-horizontal", :id=>"register" } do |f| %>
+
+
+
+      <div class="form-group">
+        <label for="inputPassword" class="col-sm-3 control-label">Speciality Name</label>
+        <div class="col-sm-7">
+          <%= f.text_field :speciality_name, :class=>"form-control", :placeholder=>"Speciality Name"%>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputPassword" class="col-sm-3 control-label">Doctor Name</label>
+        <div class="col-sm-7">
+          <%= f.text_field :doctor_name, :class=>"form-control", :placeholder=>"Doctor Name"%>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputPassword" class="col-sm-3 control-label">Doctor Venue</label>
+        <div class="col-sm-7">
+          <%= f.text_field :doctor_venue, :class=>"form-control", :placeholder=>"Doctor Venue"%>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputPassword" class="col-sm-3 control-label">Phone</label>
+        <div class="col-sm-7">
+          <%= f.text_field :phone, :class=>"form-control", :placeholder=>"Phone"%>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputPassword" class="col-sm-3 control-label">Hospital Name</label>
+        <div class="col-sm-7">
+          <%= f.text_field :hospital_name, :class=>"form-control", :placeholder=>"Hospital Name"%>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+
+
+      <div class="modal-footer">
+       <%= f.submit "OK", :class=>"btn btn-primary ok-btn-padding" %>
+       <button type="button" class="btn btn-default ok-btn-padding" data-dismiss="modal">Cancel</button>
+       <%end%>
+      </div>
+    </div>
+ </div>
+</div>
+

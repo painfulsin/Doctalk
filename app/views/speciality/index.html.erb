@@ -1,0 +1,14 @@
+<%= button_to "Add Doctor", new_speciality_path ,:method=> :get, remote: true, :class=>"btn btn-success signup-login-btn", 'data-toggle' => 'modal', 'data-target'=>'#myModal'%>
+
+
+
+<%if @speciality.present?%>
+      <% @speciality.each do |harsha| %>
+<%= harsha.speciality_name %>
+<%= harsha.doctor_name %>
+<%= harsha.doctor_venue %>
+<%= harsha.phone %>
+<%= harsha.hospital_name %>
+      <%end%>
+      <%end%>
+

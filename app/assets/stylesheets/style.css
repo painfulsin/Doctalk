@@ -17,8 +17,8 @@
   margin: 10px}
 
 .text{
-    width: 800px;
-    height: 20px;
+    width: 289px;
+    height: 63px;
     float: right;
     margin-right: 136px;
     font-size: 20px;
@@ -28,8 +28,8 @@
     text-align-last: right;
 }
 .text1{
-      width: 800px;
-    height: 20px;
+    width: 369px;
+    height: 96px;
     float: right;
     margin-right: 614px;
     margin-top: -41px;
@@ -39,13 +39,20 @@
     -moz-text-align-last: right;
     text-align-last: right;
 }
+.harsha{
+  top:10px;
+}
 
 /*Landing Page*/
 .profile-pic {
     width: 40px;height: 40px;margin-top: 7px;
 }
-ul li span.profile-name {
-    color: #fff;padding-right: 15px;font-size: 22px;vertical-align: bottom;
+ul li div.profile-name {
+    color: #fff;
+    padding-right: 15px;
+    font-size: 22px;
+    vertical-align: bottom;
+     padding-top: 9px;
 }
 .event-panels {
     border: 1px solid #959595;
