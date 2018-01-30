@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
 
   def index
+    @user=User.all
   end
 
   def check_email
