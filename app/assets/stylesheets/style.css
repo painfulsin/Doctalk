@@ -1,15 +1,5 @@
 /*Landing page*/
 
-
-body {
-  padding-bottom: 100px;
-  background: url('../assets/background.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 #main-nav{
   background: #0D3E5D;
   border: none;
@@ -579,10 +569,7 @@ a.list-group-item-custom {
 
   text-align: center;
 }
-.text{
-  color: white;
-  padding-left: 400px;
-}
+
 .ll{
   float:right;
   margin-left: 100px;
@@ -699,7 +686,7 @@ a.list-group-item-custom {
 }
 .signup-login-btn {
     margin: 10px;
-    width: 149px;
+    width: 130px;
     height: 38px
 }
 .ok-btn-padding {
