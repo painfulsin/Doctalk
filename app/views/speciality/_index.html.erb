@@ -1,0 +1,18 @@
+<%if @speciality.present?%>
+      <% @speciality.each do |harsha| %>
+<tr>
+<td ><%= harsha.hospital_name %></td >
+<td ><%= harsha.speciality_name %></td >
+<td ><%= harsha.doctor_name %></td >
+<td ><%= harsha.doctor_venue %></td >
+<td ><%= harsha.phone %></td >
+<td><%= link_to "Take Appointment",:class=>"btn btn-default" %></td>
+<td> </td>
+<td ><a href="#" class="uu">
+    <%= link_to '<i class="fa fa-trash-o fa-lg"></i><br />'.html_safe, speciality_path(@speciality),:class=>"oo", method: :delete, data: { confirm: 'Data cannot be retained back if deleted. Are you sure you want to delete the hospital?' } %>
+  </a>
+</td>
+
+</tr>
+      <%end%>
+      <%end%>
