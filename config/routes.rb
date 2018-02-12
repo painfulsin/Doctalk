@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :sessions, except: :show
   resources :doctors
   resources :speciality
+  resources :healths
 end

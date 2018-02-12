@@ -1,5 +1,13 @@
 /*Landing page*/
+.hub{
+  float:right;
+  width: 500px;
+  margin-left: -279px;
+}
 
+.hub2{
+  width: 200px;
+}
 #main-nav{
   background: #0D3E5D;
   border: none;

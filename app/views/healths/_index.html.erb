@@ -1,0 +1,14 @@
+<% @health.each do |health| %>
+<tr>
+<td></td>
+
+<td  class="hub2"><%= truncate(health.title, :length => 40) %></td >
+<td></td>
+<td></td>
+
+<td class="hub"><%= health.description %></td >
+<td ><%= health.created_at %></td >
+</tr>
+<%end%>
+
+

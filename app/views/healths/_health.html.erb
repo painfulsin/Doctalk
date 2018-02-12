@@ -1,0 +1,38 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title">health Tips</h4>
+    </div>
+
+    <div class="modal-body">
+      <%= form_for :health, :url => healths_path , method: :post, authenticity_token: true, html:{:class =>"form-horizontal", :id=>"register" } do |f| %>
+
+
+
+      <div class="form-group">
+        <label for="inputPassword" class="col-sm-3 control-label">Title</label>
+        <div class="col-sm-7">
+          <%= f.text_field :title, :class=>"form-control", :placeholder=>"Title", :required => true%>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputPassword" class="col-sm-3 control-label">Discription</label>
+        <div class="col-sm-7">
+          <%= f.text_field :description, :class=>"form-control", :placeholder=>"Description", :required => true%>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+
+
+      <div class="modal-footer">
+       <%= f.submit "OK", :class=>"btn btn-primary ok-btn-padding" %>
+       <button type="button" class="btn btn-default ok-btn-padding" data-dismiss="modal">Cancel</button>
+       <%end%>
+      </div>
+    </div>
+ </div>
+</div>
+
