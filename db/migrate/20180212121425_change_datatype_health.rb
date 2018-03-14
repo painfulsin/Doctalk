@@ -1,4 +1,4 @@
-class ChangeDatatypeHealth < ActiveRecord::Migration
+class ChangeDatatypeHealth < ActiveRecord::Migration[5.1]
    def up
         change_column :healths, :description, :text
     end

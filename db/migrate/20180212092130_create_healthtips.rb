@@ -1,4 +1,4 @@
-class CreateHealthtips < ActiveRecord::Migration
+class CreateHealthtips < ActiveRecord::Migration[5.1]
   def change
     create_table :healthtips do |t|
       t.string :title
