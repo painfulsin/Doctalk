@@ -38,9 +38,12 @@ gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   gem 'pry-doc'
   gem 'pry-rails'
-   gem "capistrano", "~> 3.10", require: false
-  gem "capistrano-rails", "~> 1.3", require: false
 end
+  
+gem 'capistrano', '3.7.2'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
+gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
 
 

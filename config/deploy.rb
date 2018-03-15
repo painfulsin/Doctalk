@@ -1,39 +1,81 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.10.1"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :rbenv_ruby, "2.3.1p112"
+set :application, "ec2_application_launch"
+set :repo_url, "git@github.com:painfulsin/Doctalk.git"
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle}
+set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/security.yml')
+set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
+set :keep_releases, 5
+set :deploy_via,      :remote_cache
 
-# Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-# Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, "/var/www/my_app_name"
+# lock "~> 3.10.1"
 
-# Default value for :format is :airbrussh.
-# set :format, :airbrussh
 
-# You can configure the Airbrussh format using :format_options.
-# These are the defaults.
-# set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
+# set :application, 'Doctalk'
+# set :repo_url, 'git@github.com:painfulsin/Doctalk.git'
+# set :scm, :git
 
-# Default value for :pty is false
-# set :pty, true
+# set :format, :pretty
 
-# Default value for :linked_files is []
-# append :linked_files, "config/database.yml", "config/secrets.yml"
+# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
+# set :linked_files, %w{config/database.yml config/security.yml}
 
-# Default value for linked_dirs is []
-# append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+# set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
 
-# Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
-
-# Default value for local_user is ENV['USER']
-# set :local_user, -> { `git config user.name`.chomp }
-
-# Default value for keep_releases is 5
 # set :keep_releases, 5
+# set :deploy_via,      :remote_cache
 
-# Uncomment the following to require manually verifying the host key before first deploy.
-# set :ssh_options, verify_host_key: :secure
+
+# # set :bundle_gemfile, -> { release_path.join('Gemfile') }
+# # set :bundle_dir, -> { shared_path.join('bundle') }
+# # set :bundle_flags, '--deployment --quiet'
+# # set :bundle_without, %w{development test}.join(' ')
+# # set :bundle_binstubs, -> { shared_path.join('bin') }
+# # set :bundle_roles, :all
+# # set :bundle_bins, %w(gem rake rails)
+# set :bundle_binstubs, nil
+
+
+# set :rbenv_ruby, "2.3.1p112"
+# set :application, "ec2_application_launch"
+# set :repo_url, "git@github.com:Qwinix/EC2_Launch_Applications_Rails.git"
+# set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle}
+# set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
+# set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
+# set :keep_releases, 5
+# set :deploy_via,      :remote_cache
+
+
+# set :whenever_roles, :all
+# path, where nginx pid file will be stored (used in logrotate recipe)
+# default value: `"/run/nginx.pid"`
+# set :nginx_pid, "/run/nginx.pid"
+
+# # nginx config file location
+# # centos users can set `/etc/nginx/conf.d`
+# # default value: `/etc/nginx/sites-available`
+# set :nginx_config_path, "/etc/nginx/sites-available"
+
+# # path, where unicorn pid file will be stored
+# # default value: `"#{current_path}/tmp/pids/unicorn.pid"`
+# set :unicorn_pid, "#{current_path}/tmp/pids/unicorn.pid"
+
+# # path, where unicorn config file will be stored
+# # default value: `"#{shared_path}/config/unicorn.rb"`
+# set :unicorn_config, "#{shared_path}/config/unicorn.rb"
+
+# # path, where unicorn log file will be stored
+# # default value: `"#{shared_path}/config/unicorn.rb"`
+# set :unicorn_log, "#{shared_path}/config/unicorn.rb"
+
+# # user name to run unicorn
+# # default value: `user` (user varibale defined in your `deploy.rb`)
+# set :unicorn_user, "deploy"
+
+# # number of unicorn workers
+# # default value: 2
+# set :unicorn_workers, 2
+
+
