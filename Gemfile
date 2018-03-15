@@ -42,8 +42,11 @@ end
   
 gem 'capistrano', '3.7.2'
 gem 'capistrano-rails'
-gem 'capistrano-bundler'
+# gem 'capistrano-bundler'
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
+
+# gem 'capistrano', '~> 3.6'
+gem 'capistrano-bundler', '~> 1.3'
 
 
 
