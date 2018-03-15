@@ -4,7 +4,7 @@ set :rbenv_ruby, "2.3.1p112"
 set :application, "Doctalk"
 set :repo_url, "git@github.com:painfulsin/Doctalk.git"
 # set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle}
-set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/security.yml')
+set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/security.yml','config/secrets.yml')
 # set :default_env, { path: "/home/deploy/.rbenv/shims:/home/deploy/.rbenv/bin:$PATH" }
 set :bundle_flags, '--deployment --quiet'
 set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
