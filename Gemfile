@@ -40,9 +40,12 @@ group :development, :test do
   gem 'pry-rails'
 end
 
- gem 'unicorn'
+ # gem 'unicorn'
+ # gem 'puma'
+ gem 'puma', '~> 3.7'
   
 gem 'capistrano', '3.7.2'
+gem 'capistrano3-puma'
 gem 'capistrano-rails'
 # gem 'capistrano-bundler'
 gem 'capistrano-rbenv', github: "capistrano/rbenv"

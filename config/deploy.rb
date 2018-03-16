@@ -8,9 +8,33 @@ set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/
 # set :default_env, { path: "/home/deploy/.rbenv/shims:/home/deploy/.rbenv/bin:$PATH" }
 set :bundle_flags, '--deployment --quiet'
 set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
+set :puma_env, fetch(:rack_env, fetch(:rails_env))
+set :deploy_via,      :remote_cache
+
+namespace :puma do
+  desc 'Create Directories for Puma Pids and Socket'
+  task :make_dirs do
+    on roles(:app) do
+      execute "mkdir #{shared_path}/tmp/sockets -p"
+      execute "mkdir #{shared_path}/tmp/pids -p"
+    end
+  end
+
+  before :make_dirs
+end
+
+
+desc 'Restart application'
+task :restart do
+  on roles(:app), :in => :sequence, :wait => 5 do
+    # Your restart mechanism here, for example:
+    invoke 'puma:restart'
+    execute :touch, release_path.join('tmp/restart.txt')
+    puts "RESTARTED SUCCESSFULLY"
+  end
+end
 
 # set :keep_releases, 5
-# set :deploy_via,      :remote_cache
 
 
 # lock "~> 3.10.1"
