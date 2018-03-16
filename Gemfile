@@ -39,6 +39,8 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-rails'
 end
+
+ gem 'unicorn'
   
 gem 'capistrano', '3.7.2'
 gem 'capistrano-rails'
