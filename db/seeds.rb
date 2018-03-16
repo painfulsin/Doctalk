@@ -3,5 +3,5 @@
 #
 # Examples:
 #
-User.create(name:'Admin',email:'admin@gmail.com',password:'admin123',password_confirmation: 'admin123')
-
+u = User.create(name:'Admin',email:'admin@gmail.com',password:'admin123',password_confirmation: 'admin123')
+u.add_role :admin

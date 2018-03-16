@@ -6,7 +6,10 @@
 <td ><%= harsha.doctor_name %></td >
 <td ><%= harsha.doctor_venue %></td >
 <td ><%= harsha.phone %></td >
-<td><%= link_to "Take Appointment",:class=>"btn btn-default" %></td>
+<td><%#= link_to "Take Appointment",:class=>"btn btn-default" %>
+	
+	<%= button_to "Take Appointment", take_appointment_path,:method=> :get, remote: true,:class => "btn btn-default", 'data-toggle' => 'modal','data-target'=>'#myModal' %>
+</td>
 <td> </td>
 <td ><a href="#" class="uu">
     <%= link_to '<i class="fa fa-trash-o fa-lg"></i><br />'.html_safe, speciality_path(@speciality),:class=>"oo", method: :delete, data: { confirm: 'Data cannot be retained back if deleted. Are you sure you want to delete the hospital?' } %>

@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   resources :doctors
   resources :speciality
   resources :healths
+
+  get 'take_appointment' => 'speciality#take_appointment'
+  post 'search_appointment' => 'speciality#search_appointment'
 end
