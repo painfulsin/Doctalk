@@ -22,13 +22,11 @@ def new
 end
 
   def take_appointment
-    respond_to do |format|
-      format.js
-    end
+     @s = Speciality.find params[:id]
   end  
 
   def search_appointment
-    binding.pry
+     @s = Speciality.find params[:id]
     # respond_to do |format|
     #   format.js
     # end

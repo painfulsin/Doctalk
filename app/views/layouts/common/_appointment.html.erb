@@ -5,7 +5,7 @@
       <h4 class="modal-title">Take Appointment</h4>
     </div>
 
-    <%= form_tag search_appointment_path , :class =>"form-horizontal", :id =>"search_appointment", :method=> :post, authenticity_token: true  do |f| %>
+    <%= form_tag search_appointment_path(id: @s) , :class =>"form-horizontal", :id =>"search_appointment", :method=> :post, authenticity_token: true  do |f| %>
 
     <div class="modal-body">
 

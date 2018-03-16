@@ -3,33 +3,35 @@
 <div class="container">
     <div class="bar">
       <div class="row">
-
-        <div class="col-sm-12">
-          <div class="add-user text-right">
-           <a href="">
-           </a>
-         </div>
-       </div>
+<form action="http://foo.com" method="post">
+  <div>
+    <label for="say">Doctor</label>
+    <!-- <input name="text" id="say" value="Hi"> -->
+    <span><%= @s.doctor_name%></span>
+  </div>
+  <div>
+    <label for="to">Time</label>
+   <form>
+  <div class="multiselect">
+    <div id="checkboxes">
+      <label for="one">
+        <input type="checkbox" id="one" />1:30 PM</label>
+      <label for="two">
+        <input type="checkbox" id="two" />4:30 PM</label>
+      <label for="three">
+        <input type="checkbox" id="three" />8:30 PM</label>
+    </div>
+  </div>
+</form>
+    <!-- <input name="to" value="Mom"> -->
+  </div>
+  <div>
+    <button>Book Appointment</button>
+  </div>
+</form>
      </div>
    </div>
  </div>
- <div class="container">
-  <div class="row">
-    <div class="transbox">
-      <table id="t01">
-        <tr>
-          <th>Time</th>
-          <th></th>
-        </tr>
-        <tr>
-        	<td>1:30</td>
-        </tr>
-
-        <%#= render :partial=>"/speciality/index" -%>
-
-      </table>
-    </div>
-  </div>
 
 
 

@@ -8,7 +8,7 @@
 <td ><%= harsha.phone %></td >
 <td><%#= link_to "Take Appointment",:class=>"btn btn-default" %>
 	
-	<%= button_to "Take Appointment", take_appointment_path,:method=> :get, remote: true,:class => "btn btn-default", 'data-toggle' => 'modal','data-target'=>'#myModal' %>
+	<%= button_to "Take Appointment", take_appointment_path(:id => harsha.id),:method=> :get, remote: true,:class => "btn btn-default", 'data-toggle' => 'modal','data-target'=>'#myModal' %>
 </td>
 <td> </td>
 <td ><a href="#" class="uu">
