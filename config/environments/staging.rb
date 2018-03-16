@@ -29,6 +29,8 @@ Rails.application.configure do
   config.assets.debug = true
   config.assets.js_compressor = :uglifier
 
+  config.assets.compile = true
+
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
