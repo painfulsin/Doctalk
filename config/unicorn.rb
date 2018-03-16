@@ -10,8 +10,7 @@ worker_processes 2
 preload_app true
 timeout 30
 # Set up socket location
-listen "/u01/apps/qwinix/doctalk/shared/sockets/unicorn.sock", :backlog
-=> 64
+listen "/u01/apps/qwinix/doctalk/shared/sockets/unicorn.sock", :backlog => 64
 # Logging
 stderr_path "/u01/apps/qwinix/doctalk/current/log/unicorn.stderr.log"
 stdout_path "/u01/apps/qwinix/doctalk/current/log/unicorn.stdout.log"
