@@ -9,7 +9,7 @@ set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/
 set :bundle_flags, '--deployment --quiet'
 set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
 set :puma_env, fetch(:rack_env, fetch(:rails_env))
-set :deploy_via,      :remote_cache
+# set :deploy_via,      :remote_cache
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
