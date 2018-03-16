@@ -20,7 +20,7 @@ namespace :puma do
     end
   end
 
-  before :make_dirs
+  # before :make_dirs
 end
 
 
