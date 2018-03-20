@@ -5,6 +5,10 @@ class SpecialityController < ApplicationController
   @speciality = Speciality.all
 end
 
+def search
+  @speciality = Speciality.search(params[:search])
+  end
+
 
 def create
   @speciality = Speciality.new(speciality_params)
@@ -23,7 +27,7 @@ end
 
   def take_appointment
      @s = Speciality.find params[:id]
-  end  
+  end
 
   def search_appointment
      @s = Speciality.find params[:id]
@@ -33,12 +37,12 @@ end
   end
 
 
-  #   def destroy
-  #   @speciality = Speciality.find_by(:id => params[:id])
-  #   @speciality.destroy
-  #   flash[:notice] = "hospital deleted successfully!"
-  #   redirect_to speciality_index_path
-  # end
+    def destroy
+    @speciality = Speciality.find_by(:id => params[:id])
+    @speciality.destroy
+    flash[:notice] = "hospital deleted successfully!"
+    redirect_to speciality_index_path
+  end
 
   private
 

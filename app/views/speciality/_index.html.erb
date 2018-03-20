@@ -1,21 +1,42 @@
+      <table id="t01">
+        <tr>
+          <th>Hospital Name</th>
+          <th>Speciality name</th>
+          <th>Doctor Name <i></i></th>
+          <th>Venue </th>
+          <th>Phone </th>
+          <th>Fix Appointment</th>
+          <th></th>
+          <th></th>
+
+        </tr>
+
+
+
+
 <%if @speciality.present?%>
-      <% @speciality.each do |harsha| %>
+      <% @speciality.each do |speciality| %>
 <tr>
-<td ><%= harsha.hospital_name %></td >
-<td ><%= harsha.speciality_name %></td >
-<td ><%= harsha.doctor_name %></td >
-<td ><%= harsha.doctor_venue %></td >
-<td ><%= harsha.phone %></td >
+<td ><%= speciality.hospital_name %></td >
+<td ><%= speciality.speciality_name %></td >
+<td ><%= speciality.doctor_name %></td >
+<td ><%= speciality.doctor_venue %></td >
+<td ><%= speciality.phone %></td >
 <td><%#= link_to "Take Appointment",:class=>"btn btn-default" %>
-	
-	<%= button_to "Take Appointment", take_appointment_path(:id => harsha.id),:method=> :get, remote: true,:class => "btn btn-default", 'data-toggle' => 'modal','data-target'=>'#myModal' %>
+
+	<%= button_to "Take Appointment", take_appointment_path(:id => speciality.id),:method=> :get, remote: true,:class => "btn btn-default", 'data-toggle' => 'modal','data-target'=>'#myModal' %>
 </td>
 <td> </td>
+<%if current_user.has_role? :admin %>
 <td ><a href="#" class="uu">
-    <%= link_to '<i class="fa fa-trash-o fa-lg"></i><br />'.html_safe, speciality_path(@speciality),:class=>"oo", method: :delete, data: { confirm: 'Data cannot be retained back if deleted. Are you sure you want to delete the hospital?' } %>
+
+    <%= link_to '<i class="fa fa-trash-o fa-lg"></i><br />'.html_safe, speciality_path(:id => speciality.id),:class=>"oo", method: :delete, data: { confirm: 'Data cannot be retained back if deleted. Are you sure you want to delete the hospital?' } %>
   </a>
 </td>
+<%end%>
 
 </tr>
       <%end%>
       <%end%>
+
+      </table>

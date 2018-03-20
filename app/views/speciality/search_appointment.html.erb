@@ -1,37 +1,102 @@
-
-
-<div class="container">
-    <div class="bar">
+  <div class="panel panel-default">
+    <div class="panel-heading"><h3><strong></strong></h3></div>
+    <div class="panel-body">
       <div class="row">
-<form action="http://foo.com" method="post">
-  <div>
-    <label for="say">Doctor</label>
-    <!-- <input name="text" id="say" value="Hi"> -->
-    <span><%= @s.doctor_name%></span>
-  </div>
-  <div>
-    <label for="to">Time</label>
-   <form>
-  <div class="multiselect">
-    <div id="checkboxes">
-      <label for="one">
-        <input type="checkbox" id="one" />1:30 PM</label>
-      <label for="two">
-        <input type="checkbox" id="two" />4:30 PM</label>
-      <label for="three">
-        <input type="checkbox" id="three" />8:30 PM</label>
+        <div class="col-sm-12">
+          <div>
+            <div class="well-new">
+              <h4 class="text-center">Appointment</h4>
+
+              <div>
+                <div class="form-horizontal">
+                 <div class="form-group">
+                  <label class="col-sm-3 text-right" for="">Speciality</label>
+                  <div class="col-sm-8">
+                    <div class="input-group">
+                      <input value = "<%= @s.speciality_name%>" type="text" class="form-control" id="pnumber" readonly>
+                    </div>
+                  </div>
+                  <div class="col-sm-1"></div>
+                </div>
+              </div>
+
+              <div class="form-horizontal">
+               <div class="form-group">
+                <label class="col-sm-3 text-right" for="">Doctor Name</label>
+                <div class="col-sm-8">
+                  <div class="input-group">
+                    <input type="text" value = "<%= @s.doctor_name%>" class="form-control" id="pnumber" readonly>
+                  </div>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+            </div>
+            <div class="form-horizontal">
+             <div class="form-group">
+              <label class="col-sm-3 text-right" for="">Phone</label>
+              <div class="col-sm-8">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                  <input type="text" value ="<%= @s.phone%>" class="form-control" id="pnumber" readonly>
+                </div>
+              </div>
+              <div class="col-sm-1"></div>
+            </div>
+          </div>
+
+          <div class="form-horizontal">
+           <div class="form-group">
+            <label class="col-sm-3 text-right" for="">Venue</label>
+            <div class="col-sm-8">
+              <div class="input-group">
+                <span><i></i></span>
+                <input type="text" value = "<%= @s.doctor_venue%>" class="form-control" id="pnumber" readonly>
+              </div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+        </div>
+
+          <div class="form-horizontal">
+           <div class="form-group">
+            <label class="col-sm-3 text-right" for="">Slots</label>
+            <div class="col-sm-8">
+              <div class="input-group">
+                <form>
+          <div class="multiselect">
+            <div id="checkboxes">
+              <label for="one">
+                <input type="checkbox" id="one" />1:30 PM</label>
+                <br />
+                <label for="two">
+                  <input type="checkbox" id="two" />4:30 PM</label>
+                  <br />
+                  <label for="three">
+                    <input type="checkbox" id="three" />8:30 PM</label>
+                  </div>
+                </div>
+              </form>
+              </div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+        </div>
+
+        <br />
+
+            </div>
+            <div>
+              <button style="
+              float: right;" class="btn btn-success signup-login-btn">Book Appointment</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</form>
-    <!-- <input name="to" value="Mom"> -->
-  </div>
-  <div>
-    <button>Book Appointment</button>
-  </div>
-</form>
-     </div>
-   </div>
- </div>
+
+
+
+
 
 
 

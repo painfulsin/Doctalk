@@ -1,6 +1,17 @@
+
 <%if current_user.has_role? :admin %>
 <%= button_to "Add Doctor", new_speciality_path ,:method=> :get, remote: true, :class=>"btn btn-success signup-login-btn", 'data-toggle' => 'modal', 'data-target'=>'#myModal'%>
 <%end%>
+
+<%= form_tag search_path, :method => 'get', :class=> "search1", :remote => true do %>
+  <p style="
+    height: 40px;
+    width: 250px;
+">
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :style=> "margin-left: -216px;" %>
+  </p>
+<% end %>
 
 
 <div class="container">
@@ -19,24 +30,22 @@
  <div class="container">
   <div class="row">
     <div class="transbox">
-      <table id="t01">
-        <tr>
-          <th>Hospital Name</th>
-          <th>Speciality name</th>
-          <th>Doctor Name <i></i></th>
-          <th>Venue </th>
-          <th>Phone </th>
-          <th>Fix Appointment</th>
-          <th></th>
-          <th></th>
 
-        </tr>
 
-        <%= render :partial=>"/speciality/index" -%>
+        <div id="spec">
+          <%= render :partial=>"/speciality/index" %>
+        </div>
 
-      </table>
+    </div>
     </div>
   </div>
+  <style type="text/css">
+.search1{
+  float: right;
+}
+}
+  </style>
+
 
 
 
