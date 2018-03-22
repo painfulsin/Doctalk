@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   get 'take_appointment' => 'speciality#take_appointment'
   post 'search_appointment' => 'speciality#search_appointment'
   get 'search' => 'speciality#search'
+  post 'book' => 'speciality#book'
 
 end

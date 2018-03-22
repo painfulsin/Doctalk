@@ -30,10 +30,32 @@ end
   end
 
   def search_appointment
+    day = Time.strptime(params[:appointment_date],"%m/%d/%Y").strftime('%A').upcase
      @s = Speciality.find params[:id]
-    # respond_to do |format|
-    #   format.js
-    # end
+     @time = case day
+      when "MONDAY"
+        ConfigCenter::DAYS::MONDAY
+      when "TUESDAY"
+        ConfigCenter::DAYS::TUESDAY
+      when "WEDNESDAY"
+        ConfigCenter::DAYS::WEDNESDAY
+      when "THURSDAY"
+        ConfigCenter::DAYS::THURSDAY
+      when "FRIDAY"
+        ConfigCenter::DAYS::FRIDAY
+      when "SATURDAY"
+        ConfigCenter::DAYS::SATURDAY
+      when "SUNDAY"
+        ConfigCenter::DAYS::SUNDAY
+      end
+  end
+
+  def book
+     @s = Speciality.find params[:id]
+     book = @s.appointments.build(user_id: current_user.id,appointment_date: Time.strptime(params[:date],"%m/%d/%Y"),appointment_time: params[:time])
+     book.save
+     token = Appointment.where(appointment_date: Time.strptime(params[:date],"%m/%d/%Y"),appointment_time: Time.parse(params[:time]).to_s)
+     UserMailer.book(current_user,token,book).deliver
   end
 
 

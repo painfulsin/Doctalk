@@ -55,6 +55,19 @@
             </div>
             <div class="col-sm-1"></div>
           </div>
+        </div>    
+   <%= form_for :book, :url => book_path(id: @s.id) , method: :post, authenticity_token: true, html:{:class =>"form-horizontal", :id=>"register" } do |f| %>
+         <div class="form-horizontal">
+           <div class="form-group">
+            <label class="col-sm-3 text-right" for="">Date</label>
+            <div class="col-sm-8">
+              <div class="input-group">
+                <span><i></i></span>
+                <input type="text" name="date" value = "<%= params[:appointment_date]%>" class="form-control" id="pnumber" readonly>
+              </div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
         </div>
 
           <div class="form-horizontal">
@@ -62,20 +75,14 @@
             <label class="col-sm-3 text-right" for="">Slots</label>
             <div class="col-sm-8">
               <div class="input-group">
-                <form>
+             
           <div class="multiselect">
             <div id="checkboxes">
-              <label for="one">
-                <input type="checkbox" id="one" />1:30 PM</label>
-                <br />
-                <label for="two">
-                  <input type="checkbox" id="two" />4:30 PM</label>
-                  <br />
-                  <label for="three">
-                    <input type="checkbox" id="three" />8:30 PM</label>
+              <% @time.each do |time|%>
+                <input type="radio" name="time" value='<%= time%>'> <%= time %><br>
+              <% end%>
                   </div>
                 </div>
-              </form>
               </div>
             </div>
             <div class="col-sm-1"></div>
@@ -89,6 +96,8 @@
               <button style="
               float: right;" class="btn btn-success signup-login-btn">Book Appointment</button>
             </div>
+              <% end %>
+
           </div>
         </div>
       </div>
