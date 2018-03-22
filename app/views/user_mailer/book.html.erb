@@ -1,1 +1,16 @@
-<h1> Hi Special <%= @token %> </h1>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel='stylesheet' type='text/css' href='/assets/email.css'>
+</head>
+
+<body>
+  <h2> Hi <%= @user.name %>,<br /> </h2>
+  <h3>Your Appointment has been booked with TOKEN NUMBER <%= @token %> <br />
+  <%= @spec.speciality_name %> <br />
+  <%= @spec.doctor_name %> <br />
+  <%= @spec.doctor_venue %> <br /></h3>
+
+</body>
+</html>

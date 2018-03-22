@@ -4,7 +4,7 @@ development:
   reconnect: false
   database: doctalk_development
   pool: 5
-  username: shashikirans
-  password: 
+  username: postgres
+  password: password
   host: localhost
   port: 5432
