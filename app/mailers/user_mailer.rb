@@ -1,8 +1,9 @@
 class UserMailer < ApplicationMailer
-	def book(user,token,book)
+
+	def book(user,token,book,spec)
 	  @user = user
+    @spec = spec
 	  @token = token.count == 0 ? 1 : (token.count + 1)
-	  binding.pry
-	  mail to: user.email, :subject => 'Please reset your Diversified Radiology password'
+	  mail to: user.email, :subject => 'Appointment Confirmation Email'
 	end
 end
