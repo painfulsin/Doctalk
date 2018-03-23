@@ -55,7 +55,10 @@ end
      book = @s.appointments.build(user_id: current_user.id,appointment_date: Time.strptime(params[:date],"%m/%d/%Y"),appointment_time: params[:time])
      book.save
      token = Appointment.where(appointment_date: Time.strptime(params[:date],"%m/%d/%Y"),appointment_time: Time.parse(params[:time]).to_s)
-     UserMailer.book(current_user,token,book,@s).deliver
+     a = [@s,book]
+     a.each do |d|
+     UserMailer.book(current_user,token,book,a).deliver
+     end
     redirect_to speciality_index_path
   end
 
