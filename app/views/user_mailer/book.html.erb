@@ -7,10 +7,10 @@
 
 <body>
   <h2> Hi <%= @user.name %>,<br /> </h2>
-  <h3>Your Appointment has been booked with TOKEN NUMBER <%= @token %> <br />
-  <%= @spec.speciality_name %> <br />
-  <%= @spec.doctor_name %> <br />
-  <%= @spec.doctor_venue %> <br /></h3>
+  <h4>Your Appointment has been booked with TOKEN NUMBER <%= @token %> <br />
+  <h4> Speciality Name</h4> <%= @spec.speciality_name %> <br />
+  <h4> Doctor Name  </h4> <%= @spec.doctor_name %> <br />
+  <h4> Venue</h4><%= @spec.doctor_venue %> <br /></h4>
 
 </body>
 </html>
