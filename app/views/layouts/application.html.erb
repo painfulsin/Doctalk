@@ -5,8 +5,10 @@
 	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+   <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
+   <script src="https://code.highcharts.com/highcharts.src.js"></script>
 </head>
 <body>
 <%= render :partial=>"layouts/common/header"%>
@@ -17,3 +19,4 @@
 	<%= yield %>
 </body>
 </html>
+

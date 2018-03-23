@@ -44,7 +44,10 @@ div.container123 {
     </br>
     </br>
 
-    <li><a href="#" class="doctorapp"> Suggestions</a></li>
+    <%if current_user.has_role? :admin %>
+        <li><%= link_to "Analytics", graph_rule_path, :class=> "doctorapp" %></li>
+    <% end %>
+
     </br>
     </br>
 

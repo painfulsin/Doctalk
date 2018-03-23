@@ -17,8 +17,10 @@
 //= require jquery.validate
 //= require jquery.validate.min
 //= require turbolinks
+//= require chartkick
 //= require signup
 //= require user_update
 //= require signin
 //= require creation
+//= require highcharts
 //= require_tree .

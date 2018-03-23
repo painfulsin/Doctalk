@@ -25,6 +25,10 @@ end
 def new
 end
 
+def graph_rule
+  @s = Appointment.all
+end
+
   def take_appointment
      @s = Speciality.find params[:id]
   end
