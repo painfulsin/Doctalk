@@ -9,7 +9,7 @@
 
         <% @appointments.each do |appointment| %>
         <tr>
-          <td ><%= appointment.speciality.hospital_name %></td >
+          <td ><%= appointment.speciality.try(&:hospital_name) %></td >
             <td ><%= appointment.user.name %></td >
               <td ><%= appointment.appointment_time.strftime("%H:%M %p")%></td >
                 <td ><%= appointment.appointment_date.strftime("%d-%m-%y") %></td >
