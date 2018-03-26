@@ -55,7 +55,7 @@
             </div>
             <div class="col-sm-1"></div>
           </div>
-        </div>    
+        </div>
    <%= form_for :book, :url => book_path(id: @s.id) , method: :post, authenticity_token: true, html:{:class =>"form-horizontal", :id=>"register" } do |f| %>
          <div class="form-horizontal">
            <div class="form-group">
@@ -75,7 +75,7 @@
             <label class="col-sm-3 text-right" for="">Slots</label>
             <div class="col-sm-8">
               <div class="input-group">
-             
+
           <div class="multiselect">
             <div id="checkboxes">
               <% @time.each do |time|%>
@@ -94,7 +94,7 @@
             </div>
             <div>
               <button style="
-              float: right;" class="btn btn-success signup-login-btn">Book Appointment</button>
+              float: right;" class="btn btn-success dev">Book Appointment</button>
             </div>
               <% end %>
 

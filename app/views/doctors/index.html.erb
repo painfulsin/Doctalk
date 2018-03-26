@@ -46,6 +46,14 @@ div.container123 {
 
     <%if current_user.has_role? :admin %>
         <li><%= link_to "Analytics", graph_rule_path, :class=> "doctorapp" %></li>
+
+    <% end %>
+
+    </br>
+    </br>
+    <%if current_user.has_role? :admin %>
+
+    <li><%= link_to "Patients Details", patient_detail_path, :class=> "doctorapp" %></li>
     <% end %>
 
     </br>

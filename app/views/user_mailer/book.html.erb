@@ -11,6 +11,7 @@
   <h4> Speciality Name</h4> <%= @spec.speciality_name %> <br /><br />
   <h4> Doctor Name  </h4> <%= @spec.doctor_name %> <br /><br />
   <h4> Venue</h4><%= @spec.doctor_venue %> <br /></h4>
-
+  <h4> Appointment Time</h4><%= @book.appointment_time.strftime("%H:%M %p") %> <br /></h4>
+  <h4> Appointment Date</h4><%= @book.appointment_date.strftime("%d-%m-%y") %> <br /></h4>
 </body>
 </html>

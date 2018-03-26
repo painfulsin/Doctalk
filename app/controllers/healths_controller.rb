@@ -5,17 +5,16 @@ class HealthsController < ApplicationController
   end
 
 
-def create
-  @health = Health.new(health_params)
-      if @health.valid?
-        @health.save
-        redirect_to healths_path
-        flash[:success] = "Health Tips added successfully!"
-      else
-        render 'new'
-
-      end
-end
+  def create
+    @health = Health.new(health_params)
+    if @health.valid?
+      @health.save
+      redirect_to healths_path
+      flash[:success] = "Health Tips added successfully!"
+    else
+      render 'new'
+    end
+  end
 
   def new
   end
@@ -27,6 +26,6 @@ end
 
   private
   def health_params
-      params.require(:health).permit( :title, :description)
-    end
+    params.require(:health).permit( :title, :description)
+  end
 end

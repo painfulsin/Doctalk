@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   get 'search' => 'speciality#search'
   post 'book' => 'speciality#book'
   get 'graph_rule' => 'speciality#graph_rule'
-
+  get 'patient_detail' => 'speciality#patient_detail'
 end

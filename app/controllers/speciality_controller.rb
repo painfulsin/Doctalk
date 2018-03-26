@@ -9,7 +9,6 @@ def search
   @speciality = Speciality.search(params[:search])
   end
 
-
 def create
   @speciality = Speciality.new(speciality_params)
   if @speciality.valid?
@@ -27,6 +26,10 @@ end
 
 def graph_rule
   @s = Appointment.all
+end
+
+def patient_detail
+  @appointments = Appointment.all.order('appointment_date desc')
 end
 
   def take_appointment
