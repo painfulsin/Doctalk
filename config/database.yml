@@ -5,7 +5,7 @@ development:
   database: doctalk_development
   pool: 5
   username: postgres
-  password: password
+  password: qwinix
   host: localhost
   port: 5432
 
@@ -16,6 +16,6 @@ staging:
   database: Doctalk
   pool: 5
   username: postgres
-  password: password
+  password: qwinix
   host: localhost
   port: 5432

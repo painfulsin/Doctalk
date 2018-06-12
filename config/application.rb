@@ -1,5 +1,5 @@
 require_relative 'boot'
-
+require "execjs"
 require 'rails/all'
 # require 'sprocket/railtie'
 
