@@ -1,4 +1,4 @@
-set :stage, :st
+set :stage, :staging
 
 set :branch, :harsha
 set :deploy_to, '/u01/apps/qwinix/doctalk_app'
