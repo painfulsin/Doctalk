@@ -1,6 +1,6 @@
 # config valid for current version and patch releases of Capistrano
 
-set :rbenv_ruby, "2.3.1p112"
+# set :rbenv_ruby, "2.3.1p112"
 set :application, "Doctalk"
 set :repo_url, "git@github.com:painfulsin/Doctalk.git"
 # set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle}
