@@ -1,7 +1,7 @@
-set :stage, :staging
+set :stage, :st
 
-set :branch, :master
-set :deploy_to, '/u01/apps/qwinix/doctalk'
+set :branch, :harsha
+set :deploy_to, '/u01/apps/qwinix/doctalk_app'
 
 # Extended Server Syntax
 # ======================
@@ -9,10 +9,10 @@ set :deploy_to, '/u01/apps/qwinix/doctalk'
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 
-role :app, %w{deploy@54.152.26.139}
-role :web, %w{deploy@54.152.26.139}
-role :db, %w{deploy@54.152.26.139}
-server '54.152.26.139', roles: %w{:web, :app, :db}, user: 'deploy'
+role :app, %w{deploy@35.154.244.179}
+role :web, %w{deploy@35.154.244.179}
+role :db, %w{deploy@35.154.244.179}
+server '35.154.244.179', roles: %w{:web, :app, :db}, user: 'deploy'
 
 set :ssh_options, {
    #verbose: :debug,

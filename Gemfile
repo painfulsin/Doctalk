@@ -26,8 +26,6 @@ gem 'bcrypt', '~> 3.1.7'
 
 
  gem 'rails_12factor', group: :production
- gem 'sendgrid'
- gem "chartkick"
 
 
 # Use unicorn as the app server
@@ -46,7 +44,7 @@ end
 
  # gem 'unicorn'
  # gem 'puma'
- gem 'puma', '~> 3.7'
+ 
   
 gem 'capistrano', '3.7.2'
 gem 'capistrano3-puma'
@@ -60,12 +58,6 @@ gem 'capistrano-bundler', '~> 1.3'
 gem 'jquery-ui-rails'
 
 
-
-
-
-
-# Use Puma as the app server
-gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -85,5 +77,5 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
 
