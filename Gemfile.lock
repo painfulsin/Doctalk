@@ -148,6 +148,9 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rolify (5.2.0)
+    rvm1-capistrano3 (1.4.0)
+      capistrano (~> 3.0)
+      sshkit (>= 1.2)
     sass (3.5.5)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -195,9 +198,9 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
-  capistrano (~> 3.5)
+  capistrano
   capistrano-bundler
-  capistrano-rails
+  capistrano-rails (~> 1.1)
   capistrano-rbenv (~> 2.0, >= 2.0.4)
   chartkick
   coffee-rails (~> 4.2)
@@ -211,6 +214,7 @@ DEPENDENCIES
   rails (= 5.1.4)
   rails_12factor
   rolify
+  rvm1-capistrano3
   sass-rails (~> 5.0)
   sendgrid
   spring

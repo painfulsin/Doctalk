@@ -50,7 +50,7 @@ end
   
 # gem 'capistrano', '3.7.2'
 # gem 'capistrano3-puma'
-gem 'capistrano-rails'
+# gem 'capistrano-rails'
 # gem 'capistrano-bundler'
 # gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
@@ -60,13 +60,16 @@ gem 'capistrano-rails'
 gem 'jquery-ui-rails'
 
 ##nmddmdnacsaxcm
-gem 'capistrano', '~> 3.5' 
- gem 'capistrano-bundler' 
+# gem 'capistrano', '~> 3.5' 
+ # gem 'capistrano-bundler' 
  # gem 'capistrano-rails' 
  gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.4'
 
 
-
+gem 'capistrano'
+gem 'capistrano-rails', '~> 1.1'
+gem 'rvm1-capistrano3', require: false
+gem 'capistrano-bundler'
 
 # Use Puma as the app server
 # gem 'puma', '~> 3.7'

@@ -44,10 +44,10 @@
 # Load DSL and Setup Up Stages
 require "capistrano/scm/git"
     # install_plugin Capistrano::SCM::Git
-require 'capistrano/setup'
+# require 'capistrano/setup'
 
 # Includes default deployment tasks
-require 'capistrano/deploy'
+# require 'capistrano/deploy'
 
 require 'capistrano/puma'
 install_plugin Capistrano::Puma
@@ -62,11 +62,16 @@ install_plugin Capistrano::Puma
 #   https://github.com/capistrano/bundler
 #   https://github.com/capistrano/rails/tree/master/assets
 #   https://github.com/capistrano/rails/tree/master/migrations
+require 'capistrano/setup'
+require 'capistrano/deploy'
+require 'capistrano/rails'
+require 'capistrano/bundler'
+require 'rvm1/capistrano3'
 #
 # require 'capistrano/rvm'
 # require 'capistrano/rbenv'
 # require 'capistrano/chruby'
-require 'capistrano/bundler'
+# require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 
