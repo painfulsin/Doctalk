@@ -46,26 +46,30 @@ end
 
  # gem 'unicorn'
  # gem 'puma'
- gem 'puma', '~> 3.7'
+ # gem 'puma', '~> 3.7'
   
-gem 'capistrano', '3.7.2'
-gem 'capistrano3-puma'
+# gem 'capistrano', '3.7.2'
+# gem 'capistrano3-puma'
 gem 'capistrano-rails'
 # gem 'capistrano-bundler'
-gem 'capistrano-rbenv', github: "capistrano/rbenv"
+# gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
 # gem 'capistrano', '~> 3.6'
-gem 'capistrano-bundler', '~> 1.3'
+# gem 'capistrano-bundler', '~> 1.3'
 
 gem 'jquery-ui-rails'
 
-
+##nmddmdnacsaxcm
+gem 'capistrano', '~> 3.5' 
+ gem 'capistrano-bundler' 
+ # gem 'capistrano-rails' 
+ gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.4'
 
 
 
 
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+# gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -87,3 +91,5 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :development, :test do
+end
