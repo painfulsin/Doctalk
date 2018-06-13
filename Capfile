@@ -49,8 +49,8 @@ require "capistrano/scm/git"
 # Includes default deployment tasks
 # require 'capistrano/deploy'
 
-require 'capistrano/puma'
-install_plugin Capistrano::Puma
+# require 'capistrano/puma'
+# install_plugin Capistrano::Puma
 
 # Includes tasks from other gems included in your Gemfile
 #
