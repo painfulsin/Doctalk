@@ -18,6 +18,7 @@ set :ssh_options, {
    #verbose: :debug,
    keys: %w(~/.ssh/id_rsa),
    auth_methods: %w(publickey)
+}
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
